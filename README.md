@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App]
+This project was bootstrapped with [Create React App]. This is my project for Start2Impact
 
 ## Available Scripts
 
