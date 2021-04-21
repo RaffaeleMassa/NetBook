@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 
 
 const Book = ({book}) =>{
+    
      
     return(
         <>
@@ -31,8 +32,8 @@ const Book = ({book}) =>{
     const BookList = ({books}) =>{
         return(
             <ul>
-                {books.items.map((book,index)=>{
-                    return <Book book ={book} key={index} />
+                {books.items.map((book,item)=>{
+                    return <Book book ={book} key={item} />
                 })}
             </ul>
         )
