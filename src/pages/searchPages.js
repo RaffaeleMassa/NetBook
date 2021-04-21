@@ -8,7 +8,7 @@ import Loader from "../components/loader"
 function SearchPage() {
     const [searchBook, setSearchBook] = useState("")
     const API_URL= "https://www.googleapis.com/books/v1/volumes?q=<searchBook>"
-    const [books, setBooks] = useState({ items: [] });
+    const [books, setBooks] = useState({items : []});
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
     
@@ -19,15 +19,17 @@ function SearchPage() {
   const callApi = async () =>{
     setLoading(false);
     setError(false);
+
     try {
     const result = await axios.get(`${API_URL}?q=${searchBook}`)
+
     setBooks(result.data);
   }
   catch(error) {
-    setError(true);
+    setError(false);
   
   }
-  setLoading(false);
+  setLoading(true);
   }
   
   const handleSubmit = (e) =>{
@@ -52,6 +54,6 @@ function SearchPage() {
   
      </>
     );
-  }
+    }
   
   export default SearchPage;
